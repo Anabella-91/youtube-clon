@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Grid} from '@material-ui/core';
-import {SearchBar, VideoList, VideoDetail} from './components';
+import {SearchBar, VideoList, VideoDetail, Header} from './components';
 import youtube from './api/youtube';
+import './App.css';
 
 class App extends Component {
     state = {
@@ -31,6 +32,7 @@ class App extends Component {
             <Grid justify='center' container spacing={10}>
             <Grid item xs={12}>
             <Grid container spacing={10}>
+            <Header />
             <Grid item xs={12}>
             <SearchBar onFormSubmit={this.handleSubmit}/>
             </Grid>
@@ -44,8 +46,7 @@ class App extends Component {
             </Grid>
             </Grid>
             </Grid>
-            )
-        }
+        )
     }
-    
-    export default App;
+};
+export default App;

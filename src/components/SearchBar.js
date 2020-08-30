@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Paper, TextField} from '@material-ui/core';
+import './SearchBar.css';
 
 class SearchBar extends Component {
     state = {
@@ -17,9 +18,9 @@ class SearchBar extends Component {
 
     render(){
         return(
-            <Paper elevation={6} style={{padding: '25px'}}>
+            <Paper elevation={2}>
                 <form onSubmit={this.handleSubmit}>
-                    <TextField fullWidth label='Buscar' onChange={this.handleChange}/>
+                    <TextField fullWidth label='Buscar' className='searchbar' onChange={this.handleChange}/>
                 </form>
             </Paper>
         )

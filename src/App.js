@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Grid} from '@material-ui/core';
 import {SearchBar, VideoList, VideoDetail, Header} from './components';
+import Footer from './components/Footer';
 import youtube from './api/youtube';
 import './App.css';
 
@@ -10,7 +11,7 @@ class App extends Component {
         selectedVideo: null
     }
     componentDidMount(){
-        this.handleSubmit('algorithms')
+        this.handleSubmit('ES6')
     }
     onVideoSelect = video => {
         this.setState({selectedVideo: video})
@@ -24,6 +25,8 @@ class App extends Component {
                 q: searchTerm
             }
         });
+        console.log(response.data.items)
+
         this.setState({videos: response.data.items, selectedVideo: response.data.items[0]});
     }
     render(){
@@ -38,11 +41,11 @@ class App extends Component {
             </Grid>
             <Grid item xs={8}>
             <VideoDetail video={selectedVideo}/>
-            
             </Grid>
             <Grid item xs={4}>
             <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>
             </Grid>
+            <Footer />
             </Grid>
             </Grid>
             </Grid>

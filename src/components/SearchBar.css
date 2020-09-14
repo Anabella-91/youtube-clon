@@ -1,4 +1,4 @@
-.searchbar{
-    background-color: #fafafa;
-    position: sticky;
+.MuiPaper-root{
+    width: 90%;
+    margin: 0 auto;
 }

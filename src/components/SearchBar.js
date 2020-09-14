@@ -18,7 +18,7 @@ class SearchBar extends Component {
 
     render(){
         return(
-            <Paper elevation={2}>
+            <Paper elevation={3}>
                 <form onSubmit={this.handleSubmit}>
                     <TextField fullWidth label='Buscar' className='searchbar' onChange={this.handleChange}/>
                 </form>

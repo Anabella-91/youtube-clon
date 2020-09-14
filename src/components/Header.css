@@ -11,9 +11,12 @@
     background-color: #fafafa;
 }
 .header__logo{
-    height: 25px;
     object-fit: contain;
     margin-left: 20px;
+    cursor: pointer;
+}
+.header__logo img{
+    width: 50px;
 }
 .header__icon{
     margin-right: 8px;
@@ -21,4 +24,5 @@
 .header__icons{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
